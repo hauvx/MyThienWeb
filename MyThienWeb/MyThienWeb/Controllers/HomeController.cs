@@ -26,5 +26,9 @@ namespace MyThienWeb.Controllers
 
             return View();
         }
+        public ActionResult TinTuc()
+        {
+            return View();
+        }
     }
 }
