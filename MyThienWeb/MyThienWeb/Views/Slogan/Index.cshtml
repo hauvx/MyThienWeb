@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layouadmin.cshtml";
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Slogan</h1>
+        <!--
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-download fa-sm text-white-50"></i>Gửi hàng loạt</a>
+            -->
+    </div>
+
+    <!--
+             <p class="mb-4">DataTables là một plugin của bên thứ ba được sử dụng để tạo bảng demo bên dưới. Để biết thêm
+                thông
+                tin về DataTables, vui lòng truy cập <a target="_blank" href="https://datatables.net">tài liệu chính thức
+                  của
+                  DataTables</a>.</p>
+    -->
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr style="background-color:gold">
+                            <th style="color:red">STT</th>
+                            <th style="color:red">Slogan</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var i = 1;
+                        }
+                        @foreach (var item in this.ViewBag.Slogan)
+                        {
+
+                           
+                            <tr role="row" class="odd" style="background-color:aliceblue">
+                                <td class="sorting_1">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            @i
+                                        </font>
+                                    </font>
+                                </td>
+                                <td>
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;"><a href="~/slogan/Xemslogan?masl=@item.MASL">@item.NOIDUNG</a></font>
+                                    </font>
+                                </td>
+                                
+                            </tr>
+
+                            i++;
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

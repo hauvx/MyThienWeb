@@ -123,6 +123,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DatLichController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SloganController.cs" />
     <Compile Include="Controllers\VienPhiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -130,9 +131,15 @@
     <Compile Include="Models\DatLichExecuteSaveAction.cs" />
     <Compile Include="Models\ShowLichHen1.cs" />
     <Compile Include="Models\ShowLichHen2.cs" />
+    <Compile Include="Models\ShowsLogan.cs" />
+    <Compile Include="Models\ShowsLogan1.cs" />
     <Compile Include="Models\VienPhiAction.cs" />
     <Compile Include="Models\XemLichHen1.cs" />
     <Compile Include="Models\XemLichHen2.cs" />
+    <Compile Include="Models\Xemslogan1.cs" />
+    <Compile Include="Models\Xemslogan2.cs" />
+    <Compile Include="Models\XoaLich1.cs" />
+    <Compile Include="Models\XoaLich2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1747,6 +1754,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\hauhau.png" />
+    <Content Include="img\logohau.ico" />
+    <Content Include="img\logohau1.ico" />
+    <Content Include="img\logohau2.ico" />
+    <Content Include="img\review\logohau.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="cssadmin\vendor\bootstrap\js\bootstrap.bundle.js.map" />
@@ -1987,6 +1999,9 @@
     <Content Include="Views\VienPhi\VienPhiList.cshtml" />
     <Content Include="Views\Admin\XemLichHen.cshtml" />
     <Content Include="Views\Admin\SuaLichHen.cshtml" />
+    <Content Include="Views\Slogan\Index.cshtml" />
+    <Content Include="Views\Slogan\_resultSlogan.cshtml" />
+    <Content Include="Views\Slogan\Xemslogan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

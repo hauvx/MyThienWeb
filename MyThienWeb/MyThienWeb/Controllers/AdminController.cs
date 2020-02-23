@@ -25,15 +25,21 @@ namespace MyThienWeb.Controllers
             return View();
         }
 
+        public ActionResult XoaLich(XoaLich1 CommandAction ,int id)
+        {
+            CommandAction.MADL = id;
+            this.ViewBag.Result = CommandAction.Execute();
+            return Redirect("Index");
+
+        }
+
         [HttpPost]
         public ActionResult SuaLichHen(DatLichExecuteSaveAction CommandAction,DatLich abc,string editFlag="M")
         {
             CommandAction.EditFlag = editFlag;
             CommandAction.Item = abc;
             this.ViewBag.bay = CommandAction.Execute();
-            ShowLichHen1 hau =new ShowLichHen1();
-            this.ViewBag.Result = hau.Execute();
-            return View("Index");
+            return Redirect("Index");
         }
     }
 }
