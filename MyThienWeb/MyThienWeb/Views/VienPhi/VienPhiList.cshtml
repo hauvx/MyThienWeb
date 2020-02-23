@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "VienPhiList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 5px;
+        text-align: left;
+    }
+</style>
+
+
+
+<h2 style=" text-align:center; color:red">Bảng Giá</h2>
+
+
+<table style="width:50%; margin:auto">
+    <caption>Monthly savings</caption>
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    @foreach (var item in this.ViewBag.Result)
+    {
+        <tr>
+            <td>@item.ChiDanh</td>
+            <td style="width:80px">@Convert.ToInt32(item.DonGia).ToString("#,##0") VNĐ</td>
+        </tr>
+    }
+    </table>

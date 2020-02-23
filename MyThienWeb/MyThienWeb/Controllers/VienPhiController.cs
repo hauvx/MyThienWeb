@@ -1,5 +1,4 @@
 ﻿using MyThienWeb.Models;
-using Ngaythang;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,21 +7,17 @@ using System.Web.Mvc;
 
 namespace MyThienWeb.Controllers
 {
-    public class DatLichController : Controller
+    public class VienPhiController : Controller
     {
-        // GET: DatLich
-        
+        // GET: VienPhi
         public ActionResult Index()
         {
             return View();
         }
-
-        [HttpPost]
-        public ActionResult Index(DatLichExecuteSaveAction CommandAction,DatLich abc)
+        public ActionResult VienPhiList(VienPhiAction CommandAction, bool isPopup = false)
         {
-            CommandAction.Item = abc;
+            this.ViewBag.isPopup = isPopup;
             this.ViewBag.Result = CommandAction.Execute();
-
             return View();
         }
     }

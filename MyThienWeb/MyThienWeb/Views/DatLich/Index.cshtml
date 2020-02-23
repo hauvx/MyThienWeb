@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
-    .contact-form input[type=date] {
+    .contact-form input[type=date], .contact-form select {
         width: 100%;
         border: none;
         font-size: 12px;
@@ -14,7 +14,16 @@
         border-left: 4px solid #71cd29;
         background: #eff2f4;
     }
-
+    .contact-form select {
+        width: 40%;
+        border: none;
+        font-size: 12px;
+        height: 59px;
+        padding: 10px 25px;
+        margin-bottom: 8px;
+        border-left: 4px solid #71cd29;
+        background: #eff2f4;
+    }
     .datlich {
         width: 100%;
         text-align: center;
@@ -53,66 +62,42 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" action="LenLich">
+                <form class="contact-form"  method="post">
+                    <input type="text" placeholder="Họ tên" name="hoten">
+                    <input type="text" placeholder="Số điện thoại" name="sdt">
+                    <input type="text" placeholder="Subject" name="tieude">
+                    <textarea placeholder="Message" name="noidung"></textarea>
+
+
                     <label>Chọn Ngày Tháng</label>
                     <br />
-                    <input type="date" id="birthday" name="birthday" style="width:420px">
+                    <input type="date" id="birthday" name="ngay" style="width:300px">
+                    <label for="cars">Chọn Giờ</label>
+
+                    <select id="cars" name="gio">
+                        <option value="8:00">8:00</option>
+                        <option value="8:30">8:30</option>
+                        <option value="9:00">9:00</option>
+                        <option value="9:30">9:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                    </select>
                     <br>
                     <br>
-                    <div class="datlich">
-                        <table>
-                            <tr>
-                                <td><button>8:00 AM</button></td>
-                                <td><button>8:30 AM</button></td>
-                                <td><button>9:00 AM</button></td>
-                                <td>
-                                    <button>9:30 AM</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><button>10:00 AM</button></td>
-                                <td><button>10:30 AM</button></td>
-                                <td><button>11:00 AM</button></td>
-                                <td><button>11:30 AM</button></td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><button>12:00 PM</button></td>
-                                <td><button>12:30 PM</button></td>
-                                <td><button>13:00 PM</button></td>
-                                <td><button>13:30 PM</button></td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><button>14:00 PM</button></td>
-                                <td><button>14:30 PM</button></td>
-                                <td><button>15:00 PM</button></td>
-                                <td><button>15:30 PM</button></td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><button>16:00 PM</button></td>
-                                <td><button>16:30 PM</button></td>
-                                <td><button>17:00 PM</button></td>
-                                <td><button>17:30 PM</button></td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><button>18:00 PM</button></td>
-                                <td><button>18:30 PM</button></td>
-                                <td><button>19:00 PM</button></td>
-                                <td><button>19:30 PM</button></td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><button>20:00 PM</button></td>
-                                <td><button>20:30 PM</button></td>
-                                <td><button>21:00 PM</button></td>
-                                <td><button>21:30 PM</button></td>
-                                </td>
-                            </tr>
-                        </table>
-                        <br>
+                    <div>
+                        <button class="site-btn">Submit</button>
                     </div>
 
                 </form>

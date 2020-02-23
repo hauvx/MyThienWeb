@@ -123,9 +123,16 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DatLichController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VienPhiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DatLichExecuteSaveAction.cs" />
+    <Compile Include="Models\ShowLichHen1.cs" />
+    <Compile Include="Models\ShowLichHen2.cs" />
+    <Compile Include="Models\VienPhiAction.cs" />
+    <Compile Include="Models\XemLichHen1.cs" />
+    <Compile Include="Models\XemLichHen2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1977,11 +1984,13 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\DatLich\Index.cshtml" />
     <Content Include="Views\DatLich\LenLich.cshtml" />
+    <Content Include="Views\VienPhi\VienPhiList.cshtml" />
+    <Content Include="Views\Admin\XemLichHen.cshtml" />
+    <Content Include="Views\Admin\SuaLichHen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="cssadmin\startbootstrap-sb-admin-2-gh-pages\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1995,6 +2004,28 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ConnectDataBase.csproj">
+      <Project>{8f6d4dad-01f1-4941-9cb6-18b28df63985}</Project>
+      <Name>ConnectDataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary2\DatLichBusiness.csproj">
+      <Project>{EB4A267A-7507-477B-A93D-71A875E202EA}</Project>
+      <Name>DatLichBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ngaythang\DatLich.csproj">
+      <Project>{C2C3EA5A-DE1D-4F5B-981E-94E385B35C67}</Project>
+      <Name>DatLich</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VienPhiRepository\VienPhiRepository.csproj">
+      <Project>{2560ce07-593f-4088-9d68-979528d2e9eb}</Project>
+      <Name>VienPhiRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VienPhi\VienPhi.csproj">
+      <Project>{3933ee04-1da9-496b-9aed-c1565168e012}</Project>
+      <Name>VienPhi</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
