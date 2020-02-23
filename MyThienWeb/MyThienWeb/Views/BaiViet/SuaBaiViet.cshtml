@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "SuaBaiViet";
+    Layout = "~/Views/Shared/_layouadmin.cshtml";
+}
+
+    <div class="container">
+        <div class="row">
+            <form class="form-horizontal" style="width:45%; margin:0 auto;" method="post" enctype="multipart/form-data" action="~/BaiViet/SuaBaiViet?mabv=@this.ViewBag.Result[0].MABV">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Thông tin bài viết</legend>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Tiêu đề:</label>
+                        <div class="col-md-12">
+                            <input name="tieude" class="form-control input-md" id="textinput" type="text" placeholder="Nhập tiêu đề" value="@this.ViewBag.Result[0].TIEUDE">
+                        </div>
+                    </div>
+
+                    <!-- Password input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="passwordinput">Nội dung chính:</label>
+                        <div class="col-md-12">
+                            <textarea name="noidungchinh" class="form-control input-md" id="passwordinput">
+                                @this.ViewBag.Result[0].TIEUDE
+                        </textarea>
+                        </div>
+                    </div>
+
+                    <!-- File Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="filebutton">Upload hình ảnh:</label>
+                        <div class="col-md-12">
+                            <input name="anh" class="input-file" id="filebutton" type="file">
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-12 control-label" style="color:red;font-weight:bold;" for="singlebutton">Rename hình ảnh có độ dài ngắn hơn 10 ký tự!</label>
+                        <div class="col-md-12">
+                            <button name="singlebutton" class="btn btn-primary" id="singlebutton">Submit</button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+

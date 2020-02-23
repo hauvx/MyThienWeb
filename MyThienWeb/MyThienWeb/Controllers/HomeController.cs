@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyThienWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,6 +29,8 @@ namespace MyThienWeb.Controllers
         }
         public ActionResult TinTuc()
         {
+            BaiVietListAcion1 CommandAction = new BaiVietListAcion1();
+            this.ViewBag.Result = CommandAction.Execute();
             return View();
         }
     }

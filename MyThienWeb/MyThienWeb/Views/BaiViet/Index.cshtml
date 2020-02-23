@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Quản Lý Bài Viết";
     Layout = "~/Views/Shared/_layouadmin.cshtml";
 }
 
@@ -9,11 +9,11 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Lịch hẹn</h1>
-        <!--
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-            class="fas fa-download fa-sm text-white-50"></i>Gửi hàng loạt</a>
-            -->
+        <h1 class="h3 mb-0 text-gray-800">Quản Lý Bài Viết</h1>
+        
+        <a href="~/BaiViet/ThemBaiViet" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-download fa-sm text-white-50"></i>Thêm</a>
+          
     </div>
 
     <!--
@@ -31,23 +31,20 @@
                     <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Họ Tên</th>
-                            <th>SDT</th>
-                            <th>Ngày Giờ Đặt</th>
-                            <th>Nội Dung</th>
-                            <th>Trạng Thái</th>  
+                            <th>Tiêu Đề</th>
+                            <th>Nội Dung Chính</th>
+                            <th>Ảnh</th>
+                            <th>Ngày Đăng</th>
                             <th>Chức Năng</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @{ 
+                        @{
                             var i = 1;
                         }
                         @foreach (var item in this.ViewBag.Result)
                         {
 
-                            var hau = "Chưa Xử Lý";
-                            if (item.TRANGTHAI == 1) { hau = "Đã Xử Lý"; }
                             <tr role="row" class="odd">
                                 <td class="sorting_1">
                                     <font style="vertical-align: inherit;">
@@ -58,32 +55,29 @@
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#">@item.HOTEN</a></font>
+                                        <font style="vertical-align: inherit;"><a href="#">@item.TIEUDE</a></font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#">@item.SDT</a></font>
+                                        <font style="vertical-align: inherit;"><a href="#">@item.NOIDUNGCHINH</a></font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#">@item.NGAY - @item.GIO</a></font>
+                                        <font style="vertical-align: inherit;"><a href="#">
+                                            <img src="~/img/blog/@item.ANH" style="width:80px;height:50px;"/></a>
+                                        </font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#">@item.TIEUDE <br />@item.NOIDUNG</a></font>
+                                        <font style="vertical-align: inherit;"><a href="#">@item.NGAYDANG</a></font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="~/admin/XemLichHen?id=@item.MADL"  >@hau</a></font>
-                                    </font>
-                                </td>
-                                <td>
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#"> Xóa</a></font>
+                                        <font style="vertical-align: inherit;"><a href="~/BaiViet/XemBaiViet?mabv=@item.MABV">Xem</a><a href="~/BaiViet/XoaBaiViet?mabv=@item.MABV" onclick="return IsDelete()">Xóa</a><a href="#">Sửa</a></font>
                                     </font>
                                 </td>
                             </tr>
@@ -100,5 +94,10 @@
 
 </div>
 <!-- /.container-fluid -->
+<script>
 
+    function IsDelete() {
+        return confirm("Bạn có muốn xóa không?");
+    }
 
+</script>

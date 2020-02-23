@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "XemBaiViet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Page Content -->
+<div class="container" style="text-align:center;margin:0 auto;width:90%;">
+
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-12">
+
+            <!-- Title -->
+            <h1 class="mt-4">@this.ViewBag.Result[0].TIEUDE</h1>
+
+            <!-- Author -->
+            <p class="lead">
+                by
+                <a href="#">Admin</a>
+            </p>
+
+            <hr>
+
+            <!-- Date/Time -->
+            <p>Đã đăng ngày @this.ViewBag.Result[0].NGAYDANG</p>
+
+            <hr>
+
+            <!-- Preview Image -->
+            <img class="img-fluid rounded" src="~/img/blog/@this.ViewBag.Result[0].ANH" alt="">
+
+            <hr>
+
+            <!-- Post Content -->
+            <p class="lead"> @this.ViewBag.Result[0].NOIDUNGCHINH</p>
+
+            <hr>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
