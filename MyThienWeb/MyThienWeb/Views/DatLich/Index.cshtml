@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .contact-form input[type=date] {
+        width: 100%;
+        border: none;
+        font-size: 12px;
+        height: 59px;
+        padding: 10px 25px;
+        margin-bottom: 8px;
+        border-left: 4px solid #71cd29;
+        background: #eff2f4;
+    }
+
+    .datlich {
+        width: 100%;
+        text-align: center;
+    }
+
+        .datlich button {
+            border: 1px solid blue;
+            background-color: #fff;
+            width: 100%;
+            height: auto;
+            color: blue;
+            padding: 10px;
+            margin: 5px;
+        }
+
+            .datlich button:hover {
+                background-color: #ddd;
+                font-weight: bold;
+            }
+</style>
+<!-- Contact section -->
+<section class="contact-section spad" style="background-color:#ddd">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-8">
+                <div class="contact-text">
+                    <h1>Đặt Lịch</h1>
+                    <div class="contact-info">
+                        <div class="ci-image set-bg" > </div>
+                        <div class="ci-content">
+                            <p>6/2 Đường số 3, cư xá Lữ gia P.15, Q.11, TP HCM</p>
+                            <p>0286.6505.188</p>
+                            <p>www.mythienhospital.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="LenLich">
+                    <label>Chọn Ngày Tháng</label>
+                    <br />
+                    <input type="date" id="birthday" name="birthday" style="width:420px">
+                    <br>
+                    <br>
+                    <div class="datlich">
+                        <table>
+                            <tr>
+                                <td><button>8:00 AM</button></td>
+                                <td><button>8:30 AM</button></td>
+                                <td><button>9:00 AM</button></td>
+                                <td>
+                                    <button>9:30 AM</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button>10:00 AM</button></td>
+                                <td><button>10:30 AM</button></td>
+                                <td><button>11:00 AM</button></td>
+                                <td><button>11:30 AM</button></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button>12:00 PM</button></td>
+                                <td><button>12:30 PM</button></td>
+                                <td><button>13:00 PM</button></td>
+                                <td><button>13:30 PM</button></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button>14:00 PM</button></td>
+                                <td><button>14:30 PM</button></td>
+                                <td><button>15:00 PM</button></td>
+                                <td><button>15:30 PM</button></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button>16:00 PM</button></td>
+                                <td><button>16:30 PM</button></td>
+                                <td><button>17:00 PM</button></td>
+                                <td><button>17:30 PM</button></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button>18:00 PM</button></td>
+                                <td><button>18:30 PM</button></td>
+                                <td><button>19:00 PM</button></td>
+                                <td><button>19:30 PM</button></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button>20:00 PM</button></td>
+                                <td><button>20:30 PM</button></td>
+                                <td><button>21:00 PM</button></td>
+                                <td><button>21:30 PM</button></td>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-lg-2">
+            </div>
+        </div>
+        </div>
+   
+</section>
+<!-- Contact section end -->
