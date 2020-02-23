@@ -149,6 +149,7 @@
     <Compile Include="Controllers\BaiVietController.cs" />
     <Compile Include="Controllers\DatLichController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SloganController.cs" />
     <Compile Include="Controllers\VienPhiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -158,17 +159,29 @@
     <Compile Include="Models\DatLichExecuteSaveAction.cs" />
     <Compile Include="Models\ShowLichHen1.cs" />
     <Compile Include="Models\ShowLichHen2.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\SuaBaiViet.cs" />
     <Compile Include="Models\ThemBaiViet.cs" />
     <Compile Include="Models\ThemBaiVietAction1.cs" />
     <Compile Include="Models\ThemBaiVietAction2.cs" />
+=======
+    <Compile Include="Models\ShowsLogan.cs" />
+    <Compile Include="Models\ShowsLogan1.cs" />
+>>>>>>> 3c5d9b6cc58645b587082b39e55aace6722539eb
     <Compile Include="Models\VienPhiAction.cs" />
     <Compile Include="Models\XemBaiViet1.cs" />
     <Compile Include="Models\XemBaiViet2.cs" />
     <Compile Include="Models\XemLichHen1.cs" />
     <Compile Include="Models\XemLichHen2.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\XoaBaiViet1.cs" />
     <Compile Include="Models\XoaBaiViet2.cs" />
+=======
+    <Compile Include="Models\Xemslogan1.cs" />
+    <Compile Include="Models\Xemslogan2.cs" />
+    <Compile Include="Models\XoaLich1.cs" />
+    <Compile Include="Models\XoaLich2.cs" />
+>>>>>>> 3c5d9b6cc58645b587082b39e55aace6722539eb
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1783,6 +1796,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\hauhau.png" />
+    <Content Include="img\logohau.ico" />
+    <Content Include="img\logohau1.ico" />
+    <Content Include="img\logohau2.ico" />
+    <Content Include="img\review\logohau.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="cssadmin\vendor\bootstrap\js\bootstrap.bundle.js.map" />
@@ -2023,10 +2041,16 @@
     <Content Include="Views\VienPhi\VienPhiList.cshtml" />
     <Content Include="Views\Admin\XemLichHen.cshtml" />
     <Content Include="Views\Admin\SuaLichHen.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\BaiViet\Index.cshtml" />
     <Content Include="Views\BaiViet\ThemBaiViet.cshtml" />
     <Content Include="Views\BaiViet\XemBaiViet.cshtml" />
     <Content Include="Views\BaiViet\SuaBaiViet.cshtml" />
+=======
+    <Content Include="Views\Slogan\Index.cshtml" />
+    <Content Include="Views\Slogan\_resultSlogan.cshtml" />
+    <Content Include="Views\Slogan\Xemslogan.cshtml" />
+>>>>>>> 3c5d9b6cc58645b587082b39e55aace6722539eb
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

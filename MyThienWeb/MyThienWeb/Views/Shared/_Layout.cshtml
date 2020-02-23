@@ -31,9 +31,10 @@
             position:sticky !important;
             top:0;
         }
+
     </style>
 </head>
-<body>
+<body onload="OnLoad();">
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -42,7 +43,7 @@
     <!-- Header section -->
     <header class="header-section sticky">
 
-        <div class="header-info">
+        <div class="header-info" style="background-color:white">
             <div class="container">
                 <div class="row">
                     <!-- Site Logo -->
@@ -50,9 +51,9 @@
 
                     <div class="col-lg-4 col-md-6 hi-item">
                         <a href="index.html" class="site-logo">
-                            <img src="~/img/Logo.png">
+                            <img src="~/img/hauhau.png">
                             <br />
-                            BỆNH VIỆN CHUYÊN KHOA RĂNG HÀM MẶT
+                            <marquee><i id="slogan">Slogan</i></marquee>
 
                         </a>
                     </div>
@@ -97,98 +98,100 @@
             </div>
         </div>
         
-        <div class="container " >
-            <div class="row">
-                <!-- responsive -->
-                <div class="nav-switch">
-                    <i class="fa fa-bars"></i>
+        <div class="header-info1" >
+            <div class="container ">
+                <div class="row">
+                    <!-- responsive -->
+                    <div class="nav-switch">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <!-- Main Menu -->
+                    <ul class="main-menu navbar-nav">
+                        <li class="active"><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li class="dropdown">
+                            <a href="service.html" class="dropdown-toggle">Dịch vụ</a>
+                            <ul class="sub-menu">
+
+                                <li id="menu-item-388" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-388">
+                                    <a class="dropdown-toggle">Xét Nghiệm</a>
+                                    <ul class="sub-menucon">
+
+                                        <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Xét Nghiệm Máu</a></li>
+                                        <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Xét Nghiệm Miễn Dịch  </a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Xét Nghiệm Nước Tiểu</a></li>
+
+
+                                    </ul>
+                                </li>
+                                <li id="menu-item-387" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-387">
+                                    <a class="dropdown-toggle">Nha Khoa - Không Phẫu Thuật</a>
+                                    <ul class="sub-menucon">
+
+                                        <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Nha Khoa Trẻ Em</a></li>
+                                        <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Nha Khoa Tổng Quát</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Niềng Răng</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Nha Khoa Thẩm Mỹ</a></li>
+
+                                    </ul>
+                                </li>
+                                <li id="menu-item-386" class=" dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-386">
+                                    <a class="dropdown-toggle">Nha Khoa - Phẫu Thuật</a>
+                                    <ul class="sub-menucon">
+
+                                        <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Phẫu Thuật Trong Miệng</a></li>
+                                        <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Implant</a></li>
+
+
+                                    </ul>
+                                </li>
+                                <li id="menu-item-7787" class=" dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-7787">
+                                    <a class="dropdown-toggle">Phẫu Thuật Tạo Hình</a>
+                                    <ul class="sub-menucon">
+
+                                        <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Tạo Hình Hàm Mặt</a></li>
+                                        <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Tạo Hình Khe Hở Môi Vòm</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">tTạo Hình Sau Chấn Thương</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Tạo Hình Khác</a></li>
+
+                                    </ul>
+                                </li>
+                                <li id="menu-item-385" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-385">
+                                    <a class="dropdown-toggle">Phẫu Thuật Thẩm Mỹ</a>
+                                    <ul class="sub-menucon">
+
+                                        <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Thẩm Mỹ Mắt</a></li>
+                                        <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Thẩm Mỹ Mũi</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Phẫu Thuật Môi Má</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Phẫu Thuật Ngực</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Hút Mỡ</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Trẻ Hóa Vùng Mặt</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Thẩm Mỹ Khác</a></li>
+
+                                    </ul>
+                                </li>
+                                <li id="menu-item-385" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-385">
+                                    <a href="Product_1.7.5_Employee-Password-Cards.html" class="dropdown-toggle">Chuyên Khoa Da</a>
+                                    <ul class="sub-menucon">
+
+                                        <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Chăm Sóc Trẻ Hóa Da</a></li>
+                                        <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Điều Trị Sẹo Lồi/Lõm/Rỗ</a></li>
+                                        <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Điều Trị Bệnh Lý Da</a></li>
+
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="~/vienphi/vienphilist">Bảng giá</a></li>
+                        <li><a href="~/home/tintuc">Tin Tức</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                        <!--<li><a href="elements.html"><i class="flaticon-020-decay"></i></a></li>-->
+                    </ul>
                 </div>
-                <!-- Main Menu -->
-                <ul class="main-menu navbar-nav">
-                    <li class="active"><a href="index.html">Trang chủ</a></li>
-                    <li><a href="about.html">Giới thiệu</a></li>
-                    <li class="dropdown">
-                        <a href="service.html" class="dropdown-toggle">Dịch vụ</a>
-                        <ul class="sub-menu">
-
-                            <li id="menu-item-388" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-388">
-                                <a class="dropdown-toggle">Xét Nghiệm</a>
-                                <ul class="sub-menucon">
-
-                                    <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Xét Nghiệm Máu</a></li>
-                                    <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Xét Nghiệm Miễn Dịch  </a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Xét Nghiệm Nước Tiểu</a></li>
-
-
-                                </ul>
-                            </li>
-                            <li id="menu-item-387" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-387">
-                                <a class="dropdown-toggle">Nha Khoa - Không Phẫu Thuật</a>
-                                <ul class="sub-menucon">
-
-                                    <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Nha Khoa Trẻ Em</a></li>
-                                    <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Nha Khoa Tổng Quát</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Niềng Răng</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Nha Khoa Thẩm Mỹ</a></li>
-
-                                </ul>
-                            </li>
-                            <li id="menu-item-386" class=" dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-386">
-                                <a class="dropdown-toggle">Nha Khoa - Phẫu Thuật</a>
-                                <ul class="sub-menucon">
-
-                                    <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Phẫu Thuật Trong Miệng</a></li>
-                                    <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Implant</a></li>
-
-
-                                </ul>
-                            </li>
-                            <li id="menu-item-7787" class=" dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-7787">
-                                <a class="dropdown-toggle">Phẫu Thuật Tạo Hình</a>
-                                <ul class="sub-menucon">
-
-                                    <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Tạo Hình Hàm Mặt</a></li>
-                                    <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Tạo Hình Khe Hở Môi Vòm</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">tTạo Hình Sau Chấn Thương</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Tạo Hình Khác</a></li>
-
-                                </ul>
-                            </li>
-                            <li id="menu-item-385" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-385">
-                                <a class="dropdown-toggle">Phẫu Thuật Thẩm Mỹ</a>
-                                <ul class="sub-menucon">
-
-                                    <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Thẩm Mỹ Mắt</a></li>
-                                    <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Thẩm Mỹ Mũi</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Phẫu Thuật Môi Má</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Phẫu Thuật Ngực</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Hút Mỡ</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Trẻ Hóa Vùng Mặt</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Thẩm Mỹ Khác</a></li>
-
-                                </ul>
-                            </li>
-                            <li id="menu-item-385" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-385">
-                                <a href="Product_1.7.5_Employee-Password-Cards.html" class="dropdown-toggle">Chuyên Khoa Da</a>
-                                <ul class="sub-menucon">
-
-                                    <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="Product_1.7.2_Signature-Pad.html">Chăm Sóc Trẻ Hóa Da</a></li>
-                                    <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="Product_1.7.3_Magnetic-Stripe-Reader.html">Điều Trị Sẹo Lồi/Lõm/Rỗ</a></li>
-                                    <li id="menu-item-7787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7787"><a href="Product_1.7.4_Passport-Scanner.html">Điều Trị Bệnh Lý Da</a></li>
-
-
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li><a href="~/vienphi/vienphilist">Bảng giá</a></li>
-                    <li><a href="~/home/tintuc">Tin Tức</a></li>                   
-                    <li><a href="contact.html">Liên hệ</a></li>
-                    <!--<li><a href="elements.html"><i class="flaticon-020-decay"></i></a></li>-->
-                </ul>
             </div>
-        </div>
+            </div>
     </header>
     <!-- Header section end -->
     <!-- Hero section -->
@@ -307,6 +310,32 @@
     <script src="~/js/owl.carousel.min.js"></script>
     <script src="~/js/circle-progress.min.js"></script>
     <script src="~/js/main.js"></script>
+    <script>
+        function OnLoad() {
+            //alert('load');
+            //$.ajax({
+            //    type: "GET",
+            //    url: '/menu/getAllCate',
+            //    data: {},
+            //    success: function (response) {
+            //        //alert(response);
+            //        $(".dropdown-menu #ketqua").html(response);
+            //    }
+            //});
 
+            $.ajax({
+                type: "POST",
+                url: '/Slogan/getSlogan',
+                data: {},
+                success: function (ketqua) {
+                  // alert("đang ở trong này");
+                    $("#slogan").html(ketqua);
+                }
+            });
+        }
+        
+
+
+    </script>
 </body>
 </html>

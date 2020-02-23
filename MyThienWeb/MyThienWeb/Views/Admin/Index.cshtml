@@ -29,14 +29,14 @@
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr>
-                            <th>STT</th>
-                            <th>Họ Tên</th>
-                            <th>SDT</th>
-                            <th>Ngày Giờ Đặt</th>
-                            <th>Nội Dung</th>
-                            <th>Trạng Thái</th>  
-                            <th>Chức Năng</th>
+                        <tr style="background-color:gold">
+                            <th style="color:red">STT</th>
+                            <th style="color:red">Họ Tên</th>
+                            <th style="color:red">SDT</th>
+                            <th style="color:red">Ngày Giờ Đặt</th>
+                            <th style="color:red">Nội Dung</th>
+                            <th style="color:red">Trạng Thái</th>  
+                            <th style="color:red">Chức Năng</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,7 +48,7 @@
 
                             var hau = "Chưa Xử Lý";
                             if (item.TRANGTHAI == 1) { hau = "Đã Xử Lý"; }
-                            <tr role="row" class="odd">
+                            <tr role="row" class="odd" style="background-color:aliceblue">
                                 <td class="sorting_1">
                                     <font style="vertical-align: inherit;">
                                         <font style="vertical-align: inherit;">
@@ -58,22 +58,22 @@
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#">@item.HOTEN</a></font>
+                                        <font style="vertical-align: inherit;"><a href="~/admin/XemLichHen?id=@item.MADL" >@item.HOTEN</a></font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#">@item.SDT</a></font>
+                                        <font style="vertical-align: inherit;">@item.SDT</font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#">@item.NGAY - @item.GIO</a></font>
+                                        <font style="vertical-align: inherit;">@item.NGAY - @item.GIO</font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#">@item.TIEUDE <br />@item.NOIDUNG</a></font>
+                                        <font style="vertical-align: inherit;">@item.TIEUDE <br />@item.NOIDUNG</font>
                                     </font>
                                 </td>
                                 <td>
@@ -83,7 +83,7 @@
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#"> Xóa</a></font>
+                                        <a href="~/admin/XoaLich?id=@item.MADL"> <i class="fa fa-trash"></i></a>
                                     </font>
                                 </td>
                             </tr>
