@@ -11,7 +11,7 @@ namespace ConnectDataBase
         protected string ConnectionString { get; }
         public Connection()
         {
-            this.ConnectionString = @"Data Source=XUANHAU\SQLEXPRESS;Initial Catalog=MyThienHospital;Integrated Security=True";
+            this.ConnectionString = @"Data Source=.;Initial Catalog=MyThienHospital;Integrated Security=True";
         }
         public void Dispose()
         {

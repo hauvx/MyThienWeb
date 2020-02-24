@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Quản Lý Bài Viết";
     Layout = "~/Views/Shared/_layouadmin.cshtml";
 }
 
@@ -9,11 +9,11 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Lịch hẹn</h1>
-        <!--
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-            class="fas fa-download fa-sm text-white-50"></i>Gửi hàng loạt</a>
-            -->
+        <h1 class="h3 mb-0 text-gray-800">Quản Lý Bài Viết</h1>
+        
+        <a href="~/BaiViet/ThemBaiViet" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-download fa-sm text-white-50"></i>Thêm</a>
+          
     </div>
 
     <!--
@@ -29,26 +29,23 @@
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr style="background-color:gold">
-                            <th style="color:red">STT</th>
-                            <th style="color:red">Họ Tên</th>
-                            <th style="color:red">SDT</th>
-                            <th style="color:red">Ngày Giờ Đặt</th>
-                            <th style="color:red">Nội Dung</th>
-                            <th style="color:red">Trạng Thái</th>  
-                            <th style="color:red">Chức Năng</th>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tiêu Đề</th>
+                            <th>Nội Dung Chính</th>
+                            <th>Ảnh</th>
+                            <th>Ngày Đăng</th>
+                            <th>Chức Năng</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @{ 
+                        @{
                             var i = 1;
                         }
                         @foreach (var item in this.ViewBag.Result)
                         {
 
-                            var hau = "Chưa Xử Lý";
-                            if (item.TRANGTHAI == 1) { hau = "Đã Xử Lý"; }
-                            <tr role="row" class="odd" style="background-color:aliceblue">
+                            <tr role="row" class="odd">
                                 <td class="sorting_1">
                                     <font style="vertical-align: inherit;">
                                         <font style="vertical-align: inherit;">
@@ -58,32 +55,29 @@
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="~/admin/XemLichHen?id=@item.MADL" >@item.HOTEN</a></font>
+                                        <font style="vertical-align: inherit;"><a href="#">@item.TIEUDE</a></font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">@item.SDT</font>
+                                        <font style="vertical-align: inherit;"><a href="#">@item.NOIDUNGCHINH</a></font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">@item.NGAY - @item.GIO</font>
+                                        <font style="vertical-align: inherit;"><a href="#">
+                                            <img src="~/img/blog/@item.ANH" style="width:80px;height:50px;"/></a>
+                                        </font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">@item.TIEUDE <br />@item.NOIDUNG</font>
+                                        <font style="vertical-align: inherit;"><a href="#">@item.NGAYDANG</a></font>
                                     </font>
                                 </td>
                                 <td>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="~/admin/XemLichHen?id=@item.MADL"  >@hau</a></font>
-                                    </font>
-                                </td>
-                                <td>
-                                    <font style="vertical-align: inherit;">
-                                        <a href="~/admin/XoaLich?id=@item.MADL"> <i class="fa fa-trash"></i></a>
+                                        <font style="vertical-align: inherit;"><a href="~/BaiViet/XemBaiViet?mabv=@item.MABV">Xem</a><a href="~/BaiViet/XoaBaiViet?mabv=@item.MABV" onclick="return IsDelete()">Xóa</a><a href="#">Sửa</a></font>
                                     </font>
                                 </td>
                             </tr>
@@ -100,5 +94,10 @@
 
 </div>
 <!-- /.container-fluid -->
+<script>
 
+    function IsDelete() {
+        return confirm("Bạn có muốn xóa không?");
+    }
 
+</script>

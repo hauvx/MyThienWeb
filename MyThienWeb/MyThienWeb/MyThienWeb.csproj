@@ -45,10 +45,35 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.3.1.2\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.4.7.0\lib\netstandard2.0\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -121,6 +146,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BaiVietController.cs" />
     <Compile Include="Controllers\DatLichController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SloganController.cs" />
@@ -128,18 +154,34 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaiVietListAcion1.cs" />
+    <Compile Include="Models\BaiVietListAcion2.cs" />
     <Compile Include="Models\DatLichExecuteSaveAction.cs" />
     <Compile Include="Models\ShowLichHen1.cs" />
     <Compile Include="Models\ShowLichHen2.cs" />
+<<<<<<< HEAD
+    <Compile Include="Models\SuaBaiViet.cs" />
+    <Compile Include="Models\ThemBaiViet.cs" />
+    <Compile Include="Models\ThemBaiVietAction1.cs" />
+    <Compile Include="Models\ThemBaiVietAction2.cs" />
+=======
     <Compile Include="Models\ShowsLogan.cs" />
     <Compile Include="Models\ShowsLogan1.cs" />
+>>>>>>> 3c5d9b6cc58645b587082b39e55aace6722539eb
     <Compile Include="Models\VienPhiAction.cs" />
+    <Compile Include="Models\XemBaiViet1.cs" />
+    <Compile Include="Models\XemBaiViet2.cs" />
     <Compile Include="Models\XemLichHen1.cs" />
     <Compile Include="Models\XemLichHen2.cs" />
+<<<<<<< HEAD
+    <Compile Include="Models\XoaBaiViet1.cs" />
+    <Compile Include="Models\XoaBaiViet2.cs" />
+=======
     <Compile Include="Models\Xemslogan1.cs" />
     <Compile Include="Models\Xemslogan2.cs" />
     <Compile Include="Models\XoaLich1.cs" />
     <Compile Include="Models\XoaLich2.cs" />
+>>>>>>> 3c5d9b6cc58645b587082b39e55aace6722539eb
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1999,9 +2041,16 @@
     <Content Include="Views\VienPhi\VienPhiList.cshtml" />
     <Content Include="Views\Admin\XemLichHen.cshtml" />
     <Content Include="Views\Admin\SuaLichHen.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\BaiViet\Index.cshtml" />
+    <Content Include="Views\BaiViet\ThemBaiViet.cshtml" />
+    <Content Include="Views\BaiViet\XemBaiViet.cshtml" />
+    <Content Include="Views\BaiViet\SuaBaiViet.cshtml" />
+=======
     <Content Include="Views\Slogan\Index.cshtml" />
     <Content Include="Views\Slogan\_resultSlogan.cshtml" />
     <Content Include="Views\Slogan\Xemslogan.cshtml" />
+>>>>>>> 3c5d9b6cc58645b587082b39e55aace6722539eb
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2021,6 +2070,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaiViet\BaiViet.csproj">
+      <Project>{BFB3D59D-4CEB-4A07-83D8-2CF2A0793D5A}</Project>
+      <Name>BaiViet</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibrary1\ConnectDataBase.csproj">
       <Project>{8f6d4dad-01f1-4941-9cb6-18b28df63985}</Project>
       <Name>ConnectDataBase</Name>
